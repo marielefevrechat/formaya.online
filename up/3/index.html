@@ -82,14 +82,67 @@
       text-decoration: underline;
     }
   </style>
-  
-
-<script src="https://www.digistore24.com/service/digistore.js"></script>
-<script>digistoreUpsell()</script>
-
 
 </head>
+<script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
+<style>
+/* garante que o container seja referência */
+[data-mndpay-render] {
+    position: relative;
+    display: block;
+}
 
+    [data-mndpay-render] button {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
+/* faixa superior (esconde nome + preço) */
+.overlay-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px; /* ajuste fino depois */
+    background: #ffffff;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* faixa inferior (esconde termos) */
+.overlay-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* ajuste fino */
+    background: #ffffff;
+    z-index: 10;
+    pointer-events: none;
+}
+</style>
+
+<script>
+function aplicarOverlay() {
+    let container = document.querySelector('[data-mndpay-render]');
+    if (!container) return;
+
+    // evita duplicar
+    if (!container.querySelector('.overlay-top')) {
+        let top = document.createElement('div');
+        top.className = 'overlay-top';
+
+        let bottom = document.createElement('div');
+        bottom.className = 'overlay-bottom';
+
+        container.appendChild(top);
+        container.appendChild(bottom);
+    }
+}
+
+// roda várias vezes até garantir
+setInterval(aplicarOverlay, 500);
+</script>
+    
 <body id="_TuSpDbat5EVHwTTgi6SZGA9D5nF2" data-page="_yBQcfoFDewP9S6ZVEvNF">
 <style>
 .dARbam4407496 {display: none}
@@ -226,14 +279,7 @@ text-align: center;
 <div class="centralizado">
 
 <div class="centralizado">
-    <!-- Botão verde -->
-    <a href="https://www.checkout-ds24.com/answer/yes" target="_blank">
-      <button class="botao-verde">KIT supremo</button>
-    </a>
-
-    <!-- Botão cinza -->
-    <div>
-      <a href="https://www.checkout-ds24.com/answer/no" class="botao-cinza" target="_blank">n</a>
+<div data-mndpay-render="019d2af6-08df-7268-bf29-951d1b9e1dc8"></div>
     </div>
 </div>
 </div>
