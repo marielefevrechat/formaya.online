@@ -91,46 +91,57 @@
 <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
 
 <style>
-/* Remove barra branca abaixo do botão */
-div[style*="box-shadow"],
-div[style*="border-radius"] {
-    box-shadow: none !important;
-    background: transparent !important;
+/* garante que o container seja referência */
+[data-mndpay-render] {
+    position: relative;
+    display: block;
 }
 
-/* Esconde texto de termos */
-footer, small {
-    display: none !important;
+/* faixa superior (esconde nome + preço) */
+.overlay-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px; /* ajuste fino depois */
+    background: #ffffff;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* faixa inferior (esconde termos) */
+.overlay-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* ajuste fino */
+    background: #ffffff;
+    z-index: 10;
+    pointer-events: none;
 }
 </style>
 
 <script>
-function limparPagina() {
-    document.querySelectorAll("div, span, p").forEach(function(el) {
-        if (!el.innerText) return;
+function aplicarOverlay() {
+    let container = document.querySelector('[data-mndpay-render]');
+    if (!container) return;
 
-        let texto = el.innerText.trim();
+    // evita duplicar
+    if (!container.querySelector('.overlay-top')) {
+        let top = document.createElement('div');
+        top.className = 'overlay-top';
 
-        // Oculta preço (€ 27,00 etc)
-        if (/€\s?\d+/g.test(texto)) {
-            el.style.display = "none";
-        }
+        let bottom = document.createElement('div');
+        bottom.className = 'overlay-bottom';
 
-        // Oculta nome do produto
-        if (texto === "Accélérateur") {
-            el.style.display = "none";
-        }
-
-        // Oculta frase de termos
-        if (texto.toLowerCase().includes("terms of use") || 
-            texto.toLowerCase().includes("clicking any button")) {
-            el.style.display = "none";
-        }
-    });
+        container.appendChild(top);
+        container.appendChild(bottom);
+    }
 }
 
-// roda continuamente por causa do render da MoneyPay
-setInterval(limparPagina, 500);
+// roda várias vezes até garantir
+setInterval(aplicarOverlay, 500);
 </script>
     
 <body id="_TuSpDbat5EVHwTTgi6SZGA9D5nF2" data-page="_yBQcfoFDewP9S6ZVEvNF">
