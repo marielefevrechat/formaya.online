@@ -90,6 +90,49 @@
 </head>
 <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
 
+<style>
+/* Remove barra branca abaixo do botão */
+div[style*="box-shadow"],
+div[style*="border-radius"] {
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Esconde texto de termos */
+footer, small {
+    display: none !important;
+}
+</style>
+
+<script>
+function limparPagina() {
+    document.querySelectorAll("div, span, p").forEach(function(el) {
+        if (!el.innerText) return;
+
+        let texto = el.innerText.trim();
+
+        // Oculta preço (€ 27,00 etc)
+        if (/€\s?\d+/g.test(texto)) {
+            el.style.display = "none";
+        }
+
+        // Oculta nome do produto
+        if (texto === "Accélérateur") {
+            el.style.display = "none";
+        }
+
+        // Oculta frase de termos
+        if (texto.toLowerCase().includes("terms of use") || 
+            texto.toLowerCase().includes("clicking any button")) {
+            el.style.display = "none";
+        }
+    });
+}
+
+// roda continuamente por causa do render da MoneyPay
+setInterval(limparPagina, 500);
+</script>
+    
 <body id="_TuSpDbat5EVHwTTgi6SZGA9D5nF2" data-page="_yBQcfoFDewP9S6ZVEvNF">
 <style>
 .dARbam4407496 {display: none}
