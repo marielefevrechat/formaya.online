@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/com.css">
+
+    <!-- Título da Página -->
+    <title>Merci</title>
+    
+    <style type="text/css">
+      body {
+        color: Black;
+        background-image: url("assets/img/bg.jpeg");
+        background-color: rgba(0, 0, 0, 0.0);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: darken;
+      }
+    </style>
+    <!-- Simulação de Envio-->
+    <style>
+        #progress-container {
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        #progress-bar {
+            width: 0;
+            height: 30px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+        #status {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+<!-- Simulação de Envio-->  
+
+  </head>
+  
+  <body>
+    
+    <header class="py-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <!-- Imagem Shein -->
+            <img class="img-fluid" src="./assets/img/ultrasecreto.jpg">
+            <!-- Headline -->
+            <h3 class="my-4"><b>Merci pour votre achat !Votre demande a bien été reçue.</b></h3>
+                            <style>
+                                body {
+                                    font-family: Arial, sans-serif;
+                                    background-color: #f9f9f9;
+                                    color: #333;
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                                .container {
+                                    max-width: 800px;
+                                    margin: 50px auto;
+                                    padding: 20px;
+                                    background-color: #fff;
+                                    border-radius: 8px;
+                                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                }
+                                h1 {
+                                    font-size: 28px;
+                                    color: #333;
+                                    margin-bottom: 10px;
+                                }
+                                p {
+                                    font-size: 16px;
+                                    line-height: 1.6;
+                                    margin-bottom: 20px;
+                                }
+                                .message {
+                                    background-color: #f0f8ff;
+                                    border-radius: 6px;
+                                    padding: 15px;
+                                    margin-bottom: 20px;
+                                }
+                                .message h2 {
+                                    font-size: 20px;
+                                    margin-bottom: 10px;
+                                }
+                            </style>
+                                <div class="message">
+                                    <h2>Votre demande a bien été reçue.</h2>
+                                    <p>Merci de nous avoir choisis. En raison d'un volume important de commandes, votre commande vous sera livrée dans un délai de 30 à 60 jours ouvrables !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="py-4">
+      <div id="progress-container">
+    <div id="progress-bar">0%</div>
+</div>
+<div id="status">Statut : Commande reçue</div>
+
+<script>
+    const status = [
+        "Pedido Recibido",
+        "Preparando el Pedido",
+        "En Tránsito",
+        "Saliendo para Entrega",
+        "Entregado"
+    ];
+
+    let currentStatusIndex = 0;
+    const daysPerStatus = 2; // Días por cada estado (simulado como segundos aquí)
+    const progressBar = document.getElementById('progress-bar');
+    const statusText = document.getElementById('status');
+
+    function updateProgress() {
+        if (currentStatusIndex < status.length) {
+            const progress = (currentStatusIndex + 1) * 20;
+            progressBar.style.width = progress + '%';
+            progressBar.textContent = progress + '%';
+            statusText.textContent = "Estado: " + status[currentStatusIndex];
+            
+            currentStatusIndex += 1;
+            setTimeout(updateProgress, daysPerStatus * 172800000); // Simulando días con segundos
+        }
+    }
+
+    updateProgress();
+</script>
+<div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <!-- Imagem progresso -->
+            <img class="img-fluid" src="./assets/img/transporte.png">                           
+            <!-- Imagem progresso -->
+            <header class="py-4">
+            <header class="py-4">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+                                    <h2>Merci de votre participation. Votre inscription a bien été enregistrée dans notre système.</h2>
+                                    <h2>Pour obtenir tous les détails de votre commande, y compris les instructions et le lien de suivi, veuillez contacter notre service d'assistance.
+
+Cliquez ci-dessous pour recevoir les informations et le code vous permettant de savoir où en est votre commande.</h2>
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Suporte</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+}
+
+/* BOTÃO QUE ABRE O POPUP */
+.support-btn{
+padding:12px 25px;
+background:#ff5a00;
+color:#fff;
+border:none;
+border-radius:6px;
+cursor:pointer;
+margin-top:30px;
+}
+
+/* FUNDO ESCURO */
+.modal{
+display:none;
+position:fixed;
+z-index:999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+align-items:center;
+justify-content:center;
+}
+
+/* CAIXA DO POPUP */
+.modal-content{
+background:#fff;
+width:420px;
+border-radius:12px;
+padding:25px;
+text-align:center;
+position:relative;
+}
+
+/* BOTÃO X */
+.close{
+position:absolute;
+top:15px;
+right:20px;
+font-size:20px;
+cursor:pointer;
+}
+
+/* CAIXA CINZA */
+.support-box{
+background:#f3f4f6;
+padding:20px;
+border-radius:10px;
+margin:20px 0;
+}
+
+.support-email{
+font-weight:bold;
+font-size:18px;
+margin-top:8px;
+}
+
+/* BOTÃO ENVIAR */
+.send-btn{
+width:100%;
+background:#ff4d00;
+color:#fff;
+border:none;
+padding:14px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+margin-bottom:10px;
+}
+
+/* BOTÃO FECHAR */
+.close-btn{
+width:100%;
+background:#f5f5f5;
+border:none;
+padding:14px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<button class="support-btn" onclick="openSupport()">Assistance</button>
+
+<div id="supportModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeSupport()">×</span>
+
+<h2>Service client</h2>
+<p>Besoin d'aide ? Contactez-nous par e-mail</p>
+
+<div class="support-box">
+
+<div style="font-size:35px;">✉️</div>
+
+<p>Adresse e-mail du service d'assistance :</p>
+
+<div class="support-email">
+deliverys.team296@gmail.com
+</div>
+
+</div>
+
+<button class="send-btn" onclick="sendEmail()">
+Envoyer un e-mail
+</button>
+
+<button class="close-btn" onclick="closeSupport()">
+Fermer
+</button>
+
+</div>
+</div>
+
+<script>
+
+function openSupport(){
+document.getElementById("supportModal").style.display="flex";
+}
+
+function closeSupport(){
+document.getElementById("supportModal").style.display="none";
+}
+
+function sendEmail(){
+window.location.href="mailto:apoyotm26@gmail.com";
+}
+
+</script>
+
+</body>
+</html>
+<div class="button-xMAyyl6399192">
+<style>
+a.button-xMAyyl6399192-element {
+background: #00dd00;
+border-radius: 4px;
+border: none;
+color: #ffffff;
+padding: 16px 32px 16px 32px;
+font-weight: 600;
+display: block;
+width: fit-content;
+text-align: center;
+margin: 2vh auto 2vh auto;
+font-size: 1.49vw;
+box-sizing: border-box;
+max-width: 100%;
+transition: all 0.5s ease-in-out;
+}
+a.button-xMAyyl6399192-element:hover {
+filter: brightness(1.2);
+}
+@media (max-width: 1200px) {
+a.button-xMAyyl6399192-element {
+font-size: 1.69vw;
+margin: 1.32vh auto 1.5vh auto;
+padding: 8px 16px 8px 16px;
+}
+}
+@media (max-width: 640px) {
+a.button-xMAyyl6399192-element {
+font-size: 3.94vw;
+padding: 12px 24px 12px 24px;
+margin: 1vh auto 1vh auto;
+width: ;
+}
+}
+</style>
+</div>
+            <!-- Termos de Uso e Política de Privacidade -->
+            <div class="text-white mt-4"><a href="termos.html" class="text-white">Conditions d'utilisation</a> | <a href="privacidade.html" class="text-white">Politique de confidentialité</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./assets/js/com.js"></script>
+  </body>
+</html>
