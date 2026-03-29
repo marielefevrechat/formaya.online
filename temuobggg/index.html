@@ -133,7 +133,7 @@
             const progress = (currentStatusIndex + 1) * 20;
             progressBar.style.width = progress + '%';
             progressBar.textContent = progress + '%';
-            statusText.textContent = "Estado: " + status[currentStatusIndex];
+            statusText.textContent = "Statut: " + status[currentStatusIndex];
             
             currentStatusIndex += 1;
             setTimeout(updateProgress, daysPerStatus * 172800000); // Simulando días con segundos
