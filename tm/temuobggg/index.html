@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/com.css">
+
+    <!-- Título da Página -->
+    <title>Gracias</title>
+    
+    <style type="text/css">
+      body {
+        color: Black;
+        background-image: url("assets/img/bg.jpeg");
+        background-color: rgba(0, 0, 0, 0.0);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: darken;
+      }
+    </style>
+    <!-- Simulação de Envio-->
+    <style>
+        #progress-container {
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        #progress-bar {
+            width: 0;
+            height: 30px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+        #status {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+<!-- Simulação de Envio-->  
+
+  </head>
+  
+  <body>
+    
+    <header class="py-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <!-- Imagem Shein -->
+            <img class="img-fluid" src="./assets/img/ultrasecreto.jpg">
+            <!-- Headline -->
+            <h3 class="my-4"><b>Thank you for your purchase!</b></h3>
+                            <style>
+                                body {
+                                    font-family: Arial, sans-serif;
+                                    background-color: #f9f9f9;
+                                    color: #333;
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                                .container {
+                                    max-width: 800px;
+                                    margin: 50px auto;
+                                    padding: 20px;
+                                    background-color: #fff;
+                                    border-radius: 8px;
+                                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                }
+                                h1 {
+                                    font-size: 28px;
+                                    color: #333;
+                                    margin-bottom: 10px;
+                                }
+                                p {
+                                    font-size: 16px;
+                                    line-height: 1.6;
+                                    margin-bottom: 20px;
+                                }
+                                .message {
+                                    background-color: #f0f8ff;
+                                    border-radius: 6px;
+                                    padding: 15px;
+                                    margin-bottom: 20px;
+                                }
+                                .message h2 {
+                                    font-size: 20px;
+                                    margin-bottom: 10px;
+                                }
+                            </style>
+                                <div class="message">
+                                    <h2>Your request has been successfully received.</h2>
+                                    <p>Thank you for choosing us. Due to high order volume, your order will arrive within 30 to 60 business days!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="py-4">
+      <div id="progress-container">
+    <div id="progress-bar">0%</div>
+</div>
+<div id="status">Status: Order Received</div>
+
+<script>
+    const status = [
+        "Order Received",
+        "Preparing the Order",
+        "In Transit",
+        "Out for Delivery",
+        "Delivered"
+    ];
+
+    let currentStatusIndex = 0;
+    const daysPerStatus = 2; // Días por cada estado (simulado como segundos aquí)
+    const progressBar = document.getElementById('progress-bar');
+    const statusText = document.getElementById('status');
+
+    function updateProgress() {
+        if (currentStatusIndex < status.length) {
+            const progress = (currentStatusIndex + 1) * 20;
+            progressBar.style.width = progress + '%';
+            progressBar.textContent = progress + '%';
+            statusText.textContent = "Status: " + status[currentStatusIndex];
+            
+            currentStatusIndex += 1;
+            setTimeout(updateProgress, daysPerStatus * 172800000); // Simulando días con segundos
+        }
+    }
+
+    updateProgress();
+</script>
+<div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <!-- Imagem progresso -->
+            <img class="img-fluid" src="./assets/img/transporte.png">                           
+            <!-- Imagem progresso -->
+            <header class="py-4">
+            <header class="py-4">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+                                    <h2>Thank you for participating. Your registration has been confirmed in our system.</h2>
+                                    <h2>To receive all the details of your order, including instructions and the tracking link, please contact our support team.
+
+Click below to receive the information and tracking code so you can find out where your order is.</h2>
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Support</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+}
+
+/* BOTÃO QUE ABRE O POPUP */
+.support-btn{
+padding:12px 25px;
+background:#ff5a00;
+color:#fff;
+border:none;
+border-radius:6px;
+cursor:pointer;
+margin-top:30px;
+}
+
+/* FUNDO ESCURO */
+.modal{
+display:none;
+position:fixed;
+z-index:999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+align-items:center;
+justify-content:center;
+}
+
+/* CAIXA DO POPUP */
+.modal-content{
+background:#fff;
+width:420px;
+border-radius:12px;
+padding:25px;
+text-align:center;
+position:relative;
+}
+
+/* BOTÃO X */
+.close{
+position:absolute;
+top:15px;
+right:20px;
+font-size:20px;
+cursor:pointer;
+}
+
+/* CAIXA CINZA */
+.support-box{
+background:#f3f4f6;
+padding:20px;
+border-radius:10px;
+margin:20px 0;
+}
+
+.support-email{
+font-weight:bold;
+font-size:18px;
+margin-top:8px;
+}
+
+/* BOTÃO ENVIAR */
+.send-btn{
+width:100%;
+background:#ff4d00;
+color:#fff;
+border:none;
+padding:14px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+margin-bottom:10px;
+}
+
+/* BOTÃO FECHAR */
+.close-btn{
+width:100%;
+background:#f5f5f5;
+border:none;
+padding:14px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<button class="support-btn" onclick="openSupport()">Support</button>
+
+<div id="supportModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeSupport()">×</span>
+
+<h2>Customer Support</h2>
+<p>Need help? Contact us by email</p>
+
+<div class="support-box">
+
+<div style="font-size:35px;">✉️</div>
+
+<p>Support email:</p>
+
+<div class="support-email">
+deliverys296@gmail.com
+</div>
+
+</div>
+
+<button class="send-btn" onclick="sendEmail()">
+Send email
+</button>
+
+<button class="close-btn" onclick="closeSupport()">
+Close
+</button>
+
+</div>
+</div>
+
+<script>
+
+function openSupport(){
+document.getElementById("supportModal").style.display="flex";
+}
+
+function closeSupport(){
+document.getElementById("supportModal").style.display="none";
+}
+
+function sendEmail(){
+window.location.href="mailto:apoyotm26@gmail.com";
+}
+
+</script>
+
+</body>
+</html>
+<div class="button-xMAyyl6399192">
+<style>
+a.button-xMAyyl6399192-element {
+background: #00dd00;
+border-radius: 4px;
+border: none;
+color: #ffffff;
+padding: 16px 32px 16px 32px;
+font-weight: 600;
+display: block;
+width: fit-content;
+text-align: center;
+margin: 2vh auto 2vh auto;
+font-size: 1.49vw;
+box-sizing: border-box;
+max-width: 100%;
+transition: all 0.5s ease-in-out;
+}
+a.button-xMAyyl6399192-element:hover {
+filter: brightness(1.2);
+}
+@media (max-width: 1200px) {
+a.button-xMAyyl6399192-element {
+font-size: 1.69vw;
+margin: 1.32vh auto 1.5vh auto;
+padding: 8px 16px 8px 16px;
+}
+}
+@media (max-width: 640px) {
+a.button-xMAyyl6399192-element {
+font-size: 3.94vw;
+padding: 12px 24px 12px 24px;
+margin: 1vh auto 1vh auto;
+width: ;
+}
+}
+</style>
+</div>
+            <!-- Termos de Uso e Política de Privacidade -->
+            <div class="text-white mt-4"><a href="termos.html" class="text-white">Terms of Use</a> | <a href="privacidade.html" class="text-white">Privacy Policy</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./assets/js/com.js"></script>
+  </body>
+</html>
